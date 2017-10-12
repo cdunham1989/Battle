@@ -6,11 +6,12 @@ describe Game do
   let (:player2) { double(:player2, gets_attacked: nil) }
   subject(:game) { described_class.new(player1, player2) }
 
-# describe '::new' do
-#   it 'creates two players' do
-#     subject
-#   end
-# end
+describe '::new' do
+  it 'creates two players' do
+    expect(Player).to receive(:new).twice.with(/name[12]/)
+    game = described_class.new('name1', 'name2')
+  end
+end
 
   describe '#attack' do
     it 'allows one player to attack another' do
