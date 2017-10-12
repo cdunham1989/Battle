@@ -10,10 +10,6 @@ DEFAULT_HARM = 10
     @hp = hp
   end
 
-  # def attack(foe)
-  #   foe.gets_attacked
-  # end
-
   def gets_attacked(harm = DEFAULT_HARM)
     @hp -= harm
   end
