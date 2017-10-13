@@ -10,7 +10,6 @@ describe Player do
     end
   end
 
-
   describe '#hit_points' do
     it 'returns the hit points' do
       expect(rory.hit_points).to eq described_class::DEFAULT_HIT_POINTS
